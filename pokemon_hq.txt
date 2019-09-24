@@ -1,0 +1,63 @@
+//**--------------------------Creating Table---------------------------**// 
+
+	>> CREATE TABLE pokemon (Number Int,Name String,Type1 String,Type2 String,Total Int,HP Int,Attack Int,Defense Int,Sp_Atk Int,Sp_Def Int,Speed Int) 
+
+	>> row format delimited fields terminated BY ',' lines terminated BY '\n' tblproperties("skip.header.line.count"="1"); 
+
+//**------------------------Loading Data---------------------------------**//
+
+	>> LOAD DATA LOCAL INPATH '/home/(path)/Pokemon.csv ' INTO table pokemon; 
+
+
+//********--Problem Statement 1--*************//
+
+Q.1) Find out the average HP (Hit Points) of all the Pokémons.
+
+	>> select avg(HP) from pokemon;
+
+//*********--Problem Statement 2--*************//
+
+Q.2) Create and insert values of the existing table “pokemon” into a new table “pokemon1,” with an additional column “power_rate” to find the count 
+	of “powerful” and “moderate” from the table “pokemon1”.
+
+	>> create table pokemon1 as select *, select HP ,IF(HP>69.25875, 'powerful', IF(HP<69.25875 AND HP > 50 ,'Moderate','powerless')) AS power_rate from pokemon;
+
+
+******************Let's check how many players belongs to each categories******************************************
+
+//*******************--Problem Statement 3--*******************//
+
+Q.3) Find out the top 10 Pokémons according to their HP’s.
+
+ 	>> select name , hp from pokemon order by hp desc limit 10;
+
+//****************--Problem Statement 4--*********************//
+
+Q.4) Find out the top 10 Pokémons based on their Attack stat.
+
+	>> select name,attack from pokemon1 order by attack desc limit 10; 
+
+//****************--Problem Statement 5--***********************//
+
+Q.5) Find outtop 10 Pokémons based on their defense stat. 
+
+  	>> select name,defense from pokemon1 order by defense desc limit 10; 
+
+//******************--Problem Statement 6--********************//
+
+Q.6) Find out the top 10 Pokémons based on their total power. 
+
+  	>> select name,total from pokemon1 order by total desc limit 10;
+
+
+//***********************--Problem Statement 7--********************//
+
+Q.7) Find out the top 10 Pokémons having a drastic change in their attack and sp.attack.
+
+ 	>> select name,(attack-sp_atk) as atk_diff from pokemon1 order by atk_diff limit 10; 
+
+//*************************--Problem Statement 8--*******************//
+
+Q.8) Find the top 10 Pokémons having a drastic change in their defense and special defense
+
+  	>> select name,(Defense - Sp_Def) as def_diff from pokemon1 order by def_diff limit 10; 
