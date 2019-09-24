@@ -6,7 +6,7 @@ devices. It was released in July 2016 and in a few selected countries. You can d
 playing. You can also use PokéCoins to purchase Pokéballs, the in-game item you need to be able to catch Pokémons with. 
 Let us see how to be performing Pokémon data analysis.
 
-## Big Data, Contributed to Pokémon Go Fever
+## Big Data, Contributed to Pokémon Go... 
 
 Pokémon Go, the world’s first real world gaming, hit mobile devices on July 7. It has taken the world by storm, catapulting augmented reality technology into the mainstream. It is time to start thinking about how AR could change our streets forever?
 
