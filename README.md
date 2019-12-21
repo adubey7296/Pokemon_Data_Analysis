@@ -27,3 +27,13 @@ Pokemon Go through its location based feature identifies your location using you
 This means the game has lots of information about the locations where you are playing this game. And what’s that large set of information which the game has about you and your location? They are the large datasets which we often refer to as Big Data.
 
 So what you are playing is the Google map with augmented reality driven by Big Data which is giving you the impression of co-presence of the virtual Pokemons in your physical surroundings.
+
+## Analysis:
+*  Find out the average HP (Hit Points) of all the Pokémons.
+* Create and insert values of the existing table “pokemon” into a new table “pokemon1,” with an additional column “power_rate” to find the count of “powerful” and “moderate” from the table “pokemon1”.
+* Find out the top 10 Pokémons according to their HP’s.
+* Find out the top 10 Pokémons based on their Attack stat.
+* Find outtop 10 Pokémons based on their defense stat.
+* Find out the top 10 Pokémons based on their total power. 
+* Find out the top 10 Pokémons having a drastic change in their attack and sp.attack.
+* Find the top 10 Pokémons having a drastic change in their defense and special defense
